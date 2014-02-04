@@ -7,6 +7,8 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
 
 int checkAllUniqueChars(char[]);
 
@@ -14,15 +16,15 @@ int checkAllUniqueChars(char[]);
 int main(int argc, char* argv[])
 {
     char text[60];
-    printf("\nthis program detects whether all caracters in a string all unique");
-    printf("\nwrite something:");
+    printf("\nthis program detects whether all caracters in a string are all unique.");
+    printf("\nlet's start, write something:");
     
     if(fgets(text, sizeof(text), stdin) == NULL){
         perror("No input specified.\n");
         exit(1);
     }
 	
-    if(checkAllUniqueChars(text)!=0){
+    if(!checkAllUniqueChars(text)){
         printf("\nyou have repeated characters in your text\n");
     }
     else printf("\nthe caracteres in you text are all unique\n");
@@ -35,7 +37,8 @@ int main(int argc, char* argv[])
 //@returns: 0 for false and 1 for true.
 int checkAllUniqueChars(char text[]){
     int checker = 0;
-    char c='';
+    char c;
+    int i=0;
     
     //if the number of chars in text is greater that the number of caracters
     //being checked for uniqueness, then is impossible to not have a duplicated
@@ -46,7 +49,7 @@ int checkAllUniqueChars(char text[]){
     while((c = text[i++]) != 0)
     {
         //if [c] is 'a' then 'a' - 'a' (=) 97-97 = 0, so mask is 0000 ... 0001.
-        int letterMask = 1 << c - 'a';
+        int letterMask = 1 << (c - 'a');
         
         //if equal, the bit of letter [c] is already on, so, with one more it
         //means letter [c] is duplicated.
