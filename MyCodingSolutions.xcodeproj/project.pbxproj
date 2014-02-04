@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E82CE9D718A19E1A006776F3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E82CE9D618A19E1A006776F3 /* main.c */; };
+		E82CE9D718A19E1A006776F3 /* alluniquecharacters.c in Sources */ = {isa = PBXBuildFile; fileRef = E82CE9D618A19E1A006776F3 /* alluniquecharacters.c */; };
 		E82CE9D918A19E1A006776F3 /* MyCodingSolutions.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E82CE9D818A19E1A006776F3 /* MyCodingSolutions.1 */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		E82CE9D318A19E1A006776F3 /* MyCodingSolutions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyCodingSolutions; sourceTree = BUILT_PRODUCTS_DIR; };
-		E82CE9D618A19E1A006776F3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E82CE9D618A19E1A006776F3 /* alluniquecharacters.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = alluniquecharacters.c; sourceTree = "<group>"; };
 		E82CE9D818A19E1A006776F3 /* MyCodingSolutions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MyCodingSolutions.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 		E82CE9D518A19E1A006776F3 /* MyCodingSolutions */ = {
 			isa = PBXGroup;
 			children = (
-				E82CE9D618A19E1A006776F3 /* main.c */,
+				E82CE9D618A19E1A006776F3 /* alluniquecharacters.c */,
 				E82CE9D818A19E1A006776F3 /* MyCodingSolutions.1 */,
 			);
 			path = MyCodingSolutions;
@@ -117,7 +117,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82CE9D718A19E1A006776F3 /* main.c in Sources */,
+				E82CE9D718A19E1A006776F3 /* alluniquecharacters.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +195,9 @@
 		E82CE9DD18A19E1A006776F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = "";
+				GCC_WARN_PEDANTIC = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +205,9 @@
 		E82CE9DE18A19E1A006776F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = "";
+				GCC_WARN_PEDANTIC = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
