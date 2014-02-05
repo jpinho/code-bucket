@@ -1,13 +1,13 @@
-//
-//  Question:
-//  Implement an algorithm to determine if a string has all unique characters.
-//
-//  Assumptios:
-//  Assuming the text given contains only caracters between [a-z] (ANSI, 97-122).
-//
-//  Created by JP on 04/02/14.
-//  Copyright (c) 2014 CodeBox. All rights reserved.
-//
+/**
+ *  Question:
+ *  - Implement an algorithm to determine if a string has all unique characters.
+ *
+ *  Assumptios:
+ *  - Assuming the text given contains only caracters between [a-z] (ANSI, 97-122).
+ *
+ *  @author João Pinho
+ */
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,7 +15,6 @@
 
 int checkAllUniqueChars(char[]);
 
-//@entry-point
 int main_1(int argc, char* argv[])
 {
     char text[60];
@@ -35,32 +34,34 @@ int main_1(int argc, char* argv[])
     return 0;
 }
 
-//@summary: checks unique chars in @text, assuming @text contains characters only between [a-z].
-//@params: @text - string containing the letters to be checked for unique caracters.
-//@returns: 0 for false and 1 for true.
+/** 
+ * Checks unique chars in @text, assuming @text contains characters only between [a-z].
+ *
+ * @param text a string containing the letters to be checked for unique caracters.
+ * @return 0 for false and 1 for true.
+ */
 int checkAllUniqueChars(char text[])
 {
     int checker = 0;
     char c;
     int i=0;
     
-    //if the number of chars in text is greater that the number of caracters
-    //being checked for uniqueness, then is impossible to not have a duplicated
-    //caracter.
+    // if the number of chars in text is greater that the number of caracters being checked
+    // for uniqueness, then is impossible to not have a duplicated caracter.
     if(strlen(text) > ('z'-'a'))
         return 0;
     
     while((c = text[i++]) != 0)
     {
-        //if [c] is 'a' then 'a' - 'a' (=) 97-97 = 0, so mask is 0000 ... 0001.
+        // if [c] is 'a' then 'a' - 'a' (=) 97-97 = 0, so mask is 0000 ... 0001.
         int letterMask = 1 << (c - 'a');
         
-        //if equal, the bit of letter [c] is already on, so, with one more it
-        //means letter [c] is duplicated.
+        // if equal, the bit of letter [c] is already on, so, with one more it
+        // means letter [c] is duplicated.
         if(checker == (checker | letterMask))
             return 0;
         
-        //activates the letter bit in the checker mask.
+        // activates the letter bit in the checker mask.
         checker |= letterMask;
     }
     
