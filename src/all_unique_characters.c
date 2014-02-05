@@ -2,8 +2,8 @@
 //  Question:
 //  Implement an algorithm to determine if a string has all unique characters.
 //
-//  Solution:
-//  Assuming the text given contains only caracters between [a-z].
+//  Assumptios:
+//  Assuming the text given contains only caracters between [a-z] (ANSI, 97-122).
 //
 //  Created by JP on 04/02/14.
 //  Copyright (c) 2014 CodeBox. All rights reserved.
@@ -16,7 +16,7 @@
 int checkAllUniqueChars(char[]);
 
 //@entry-point
-int main(int argc, char* argv[])
+int main_1(int argc, char* argv[])
 {
     char text[60];
     printf("\nthis program detects whether all caracters in a string are all unique.");
