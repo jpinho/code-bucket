@@ -8,7 +8,6 @@
  *  @author João Pinho
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>

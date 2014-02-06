@@ -14,7 +14,7 @@
 
 void removeDuplicates(ll_node*);
 
-int main_3(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     ll_node* list = ll_create();
     ll_setValue(list, 9);
