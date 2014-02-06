@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include "dlinkedlist.h"
 
-ll_node* removeDuplicates(ll_node*, ll_node*);
+void removeDuplicates(ll_node*);
 
 int main_3(int argc, char* argv[])
 {
@@ -27,7 +27,7 @@ int main_3(int argc, char* argv[])
     ll_appendNode(list, 11);
     ll_printi(list);
     
-    list = removeDuplicates(list, list);
+    removeDuplicates(list);
     ll_printi(list);
     
     return 0;
@@ -41,9 +41,9 @@ int main_3(int argc, char* argv[])
  * @param head the head of the double linked list.
  * @param elem the i-th element used to check for duplicates.
  */
-ll_node* removeDuplicates(ll_node* head, ll_node* elem){
+void removeDuplicates(ll_node* elem){
     if(elem == NULL)
-        return head;
+        return;
     
     ll_node* nd=elem->next;
     
@@ -64,5 +64,5 @@ ll_node* removeDuplicates(ll_node* head, ll_node* elem){
         if(temp!=NULL) free(temp);
     }
     
-    return removeDuplicates(head, elem->next);
+    removeDuplicates(elem->next);
 }

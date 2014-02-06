@@ -30,10 +30,12 @@ int main(int argc, char* argv[]){
 
     ll_setValue(list, 'a');
     ll_appendNode(list, 'b');
-    ll_appendNode(list, 'c');
+
+    ll_node* nodeC = ll_appendNode(list, 'c');
+    
     ll_appendNode(list, 'd');
     ll_appendNode(list, 'e');
-    ll_node* nodeC = ll_appendNode(list, 'f');
+    ll_appendNode(list, 'f');
     ll_printc(list);
  
     deleteNode(nodeC);
