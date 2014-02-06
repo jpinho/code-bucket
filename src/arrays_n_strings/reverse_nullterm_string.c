@@ -13,7 +13,7 @@
 
 void reverse(char*);
 
-int main_2(int argc, char* argv[])
+int main_2(int argc, const char* argv[])
 {
     char str[] =  "Yet another Hello World (YAHW)" ;
     

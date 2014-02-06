@@ -14,7 +14,7 @@
 
 int checkAllUniqueChars(char[]);
 
-int main_1(int argc, char* argv[])
+int main_1(int argc, const char* argv[])
 {
     char text[60];
     printf("\nthis program detects whether all caracters in a string are all unique.");

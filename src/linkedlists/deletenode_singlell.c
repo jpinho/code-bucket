@@ -25,7 +25,7 @@ void deleteNode(ll_node*);
  *
  * Note: I'm using Double Linked List without using the pointer prev, so it's like using SingleLL.
  */
-int main_4(int argc, char* argv[]){
+int main_4(int argc, const char* argv[]){
     ll_node* list = ll_create();
 
     ll_setValue(list, 'a');
