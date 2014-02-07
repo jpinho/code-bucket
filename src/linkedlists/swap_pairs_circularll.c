@@ -31,19 +31,19 @@ struct list_node *swap_pairs(struct list_node *head) {
     
     while(n->next != NULL && n->next != head)
     {
-        struct list_node* e2 = n->next;            // e2 = 3->next = 4
-        struct list_node* e2_next = e2->next;  //e2_next = 4->next = 5
+        struct list_node* e2 = n->next;
+        struct list_node* e2_next = e2->next;
         
-        e2->next = n;                         //e2->next = 3
+        e2->next = n;
         
         if(e2_next != NULL && e2_next != head)
-            n->next = e2_next->next;  // 3 ->next = 5->next = 6, 3 > 6
+            n->next = e2_next->next;
         else{
-            n->next = e2_next;             // ou n->next = NULL ou n->next = head
+            n->next = e2_next;
             break;
         }
         
-        n = e2_next;                           // n = 5
+        n = e2_next; 
     }
     
     //prev loop stopped due to circular list end
