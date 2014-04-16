@@ -26,7 +26,7 @@ int main_3(int argc, const char* argv[])
     ll_appendNode(list, 11);
     ll_appendNode(list, 11);
     ll_printi(list);
-    
+
     removeDuplicates(list);
     ll_printi(list);
     

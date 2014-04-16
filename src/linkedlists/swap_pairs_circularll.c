@@ -43,7 +43,7 @@ struct list_node *swap_pairs(struct list_node *head) {
             break;
         }
         
-        n = e2_next; 
+        n = e2_next;
     }
     
     //prev loop stopped due to circular list end
@@ -54,7 +54,7 @@ struct list_node *swap_pairs(struct list_node *head) {
     return new_head;
 }
 
-int main(void){
+int main_5(void){
     int i=1, list_sz=6;
     struct list_node *list = (struct list_node*)calloc(6, sizeof(struct list_node));
     struct list_node *node = list;
