@@ -12,7 +12,7 @@ Happy Coding.
 To compile C\# code without having to create a project using Visual Studio, follow the example bellow:
 
 ```
-c:\windows\Microsoft.NET\Framework\v3.5\csc.exe /nologo /t:exe 
+> c:\windows\Microsoft.NET\Framework\v3.5\csc.exe /nologo /t:exe 
     /out:CorpInterview-ClapIt.exe CorpInterview-ClapIt.cs
 ```
 
